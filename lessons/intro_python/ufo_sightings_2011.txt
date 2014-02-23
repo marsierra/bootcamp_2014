@@ -1,0 +1,12 @@
+Jan	327
+Feb	273
+Mar	330
+Apr	316
+May	316
+Jun	395
+Jul	754
+Aug	635
+Sep	550
+Oct	639
+Nov	444
+Dec	532

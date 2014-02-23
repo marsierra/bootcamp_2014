@@ -1,0 +1,12 @@
+Jan	577
+Feb	388
+Mar	528
+Apr	495
+May	514
+Jun	748
+Jul	925
+Aug	887
+Sep	753
+Oct	668
+Nov	772
+Dec	662

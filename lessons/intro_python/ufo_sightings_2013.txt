@@ -1,0 +1,12 @@
+Jan	390
+Feb	277
+Mar	390
+Apr	414
+May	523
+Jun	617
+Jul	960
+Aug	887
+Sep	773
+Oct	772
+Nov	794
+Dec	730
