@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>/esac</title>
+</head>
+<body><u>ESAC Software Carpentry Bootcamp</u><br
+/><br
+/>First coffee break at 10:30, lunch around 12:30-13:30, 2nd coffee break at 15:00 day finishes at 16:30.<br
+/><br
+/><br
+/>Type "whcih git" at a prompt to check that git is working and installed.<br
+/><br
+/>Should be like this&nbsp; (on linux / OS/X, might be a little different on windows):<br
+/><br
+/>stuart@cadair-media ~ % which git<br
+/>/usr/bin/git<br
+/><br
+/><br
+/><u>Version Contro</u>l<br
+/><br
+/>Version control is the best thing in the universe, seriously, Version Control &gt; chocolate &gt; beer, in that order.<br
+/><br
+/>Version control keeps the whole history for all the files in the repository, allows easy collboration and backup to other computers / servers.<br
+/>&nbsp;<br
+/>Check your git config:<br
+/><br
+/>stuart@cadair-laptop ~/GitHub/sunpy (git)-[0.4] % git config --global -l<br
+/>user.name=Stuart Mumford<br
+/>user.email=stuart@mumford.me.uk<br
+/>push.default=matching<br
+/>color.ui=auto<br
+/><br
+/>Using vi:<br
+/><br
+/>vi(m) has two modes "command mode" and "insert mode" type 'i' to get into insert mode to edit the file and then press 'esc' to go back to command mode.<br
+/><br
+/>Useful vi(m) commands:<br
+/><br
+/>':q` quit<br
+/>':wq' write then quit<br
+/>':q!' quit without writing<br
+/>If you have a spanish keyboard layout you might have to use 'Ctrl-c to exit insert mode in vi(m)<br
+/>':d' deletes a line<br
+/><br
+/>Other useful git commands:<br
+/>current status of the repo, which files are being tracked and which are staged etc.<br
+/>'git commit --amend' to change the last commit message (use with caution ;))<br
+/>'git log'&nbsp;<br
+/>'git status' print the See the last commits<br
+/>'git commit -a' add all unstaged commits and commit them.<br
+/>'git log --name-status' show the git log with modified files though 'git log --stat' is some what better.<br
+/><br
+/><u>Advanced Git</u><br
+/><br
+/>This link is a good interactive resource for learning more about git branching: <a href="http://pcottle.github.io/learnGitBranching/index.html?nodemo">http://pcottle.github.io/learnGitBranching/index.html?nodemo</a><br
+/><br
+/>Git shortcut:<br
+/>'git checkout -b &lt;branchname&gt;' is the same as doing:<br
+/>&nbsp;&nbsp;&nbsp; git branch &lt;branchname&gt;<br
+/>&nbsp;&nbsp;&nbsp; git checkout &lt;branchname&gt;<br
+/><br
+/><br
+/>Clone the bootcamp repo:<br
+/><br
+/>git clone --branch students <a href="https://github.com/justincely/2014-02-24-esac.git">https://github.com/justincely/2014-02-24-esac.git</a><br
+/><br
+/><br
+/>def read_file(filename):<br
+/>&nbsp;&nbsp;&nbsp; ofile = open(filename, 'r')<br
+/>&nbsp;&nbsp;&nbsp; all_lines = ofile.readlines()<br
+/>&nbsp;&nbsp;&nbsp; return all_lines<br
+/><br
+/>def parse_line(iline):<br
+/>&nbsp;&nbsp;&nbsp; split_line = iline.split()<br
+/>&nbsp;&nbsp;&nbsp; split_line[1] = float(split_line[1])<br
+/>&nbsp;&nbsp;&nbsp; return split_line[0], split_line[1]<br
+/><br
+/>all_lines = read_file('ufo_sightings_2011.txt')<br
+/>date_list = []<br
+/>ufo_num = []<br
+/>for iline in all_lines:<br
+/>&nbsp;&nbsp;&nbsp; date, number_of_ufos = parse_line(iline)<br
+/>&nbsp;&nbsp;&nbsp; date_list.append(date)<br
+/>&nbsp;&nbsp;&nbsp; ufo_num.append(number_of_ufos)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;<br
+/>print date_list<br
+/>print ufo_num<br
+/><br
+/><br
+/>==================<br
+/><br
+/>def read_file(filename):<br
+/>&nbsp;&nbsp;&nbsp; ofile = open(filename, 'r')<br
+/>&nbsp;&nbsp;&nbsp; all_lines = ofile.readlines()<br
+/>&nbsp;&nbsp;&nbsp; return all_lines<br
+/><br
+/>def parse_line(iline):<br
+/>&nbsp;&nbsp;&nbsp; split_line = iline.split()<br
+/>&nbsp;&nbsp;&nbsp; split_line[1] = float(split_line[1])<br
+/>&nbsp;&nbsp;&nbsp; return split_line[0], split_line[1]<br
+/>if __name__ == "__main__":<br
+/>&nbsp;&nbsp;&nbsp; all_lines = read_file('ufo_sightings_2011.txt')<br
+/>&nbsp;&nbsp;&nbsp; date_list = []<br
+/>&nbsp;&nbsp;&nbsp; ufo_num = []<br
+/>&nbsp;&nbsp;&nbsp; for iline in all_lines:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; date, number_of_ufos = parse_line(iline)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; date_list.append(date)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ufo_num.append(number_of_ufos)<br
+/>&nbsp;&nbsp;&nbsp; print date_list<br
+/>&nbsp;&nbsp;&nbsp; print ufo_num<br
+/><br
+/>=====================<br
+/>import sys<br
+/>def read_file(filename):<br
+/>&nbsp;&nbsp;&nbsp; ofile = open(filename, 'r')<br
+/>&nbsp;&nbsp;&nbsp; all_lines = ofile.readlines()<br
+/>&nbsp;&nbsp;&nbsp; return all_lines<br
+/><br
+/>def parse_line(iline):<br
+/>&nbsp;&nbsp;&nbsp; split_line = iline.split()<br
+/>&nbsp;&nbsp;&nbsp; split_line[1] = float(split_line[1])<br
+/>&nbsp;&nbsp;&nbsp; return split_line[0], split_line[1]<br
+/><br
+/>if __name__ == "__main__":<br
+/>&nbsp;&nbsp;&nbsp; filename = sys.argv[1]<br
+/>&nbsp;&nbsp;&nbsp; all_lines = read_file(filename)<br
+/>&nbsp;&nbsp;&nbsp; date_list = []<br
+/>&nbsp;&nbsp;&nbsp; ufo_num = []<br
+/>&nbsp;&nbsp;&nbsp; for iline in all_lines:<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; date, number_of_ufos = parse_line(iline)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; date_list.append(date)<br
+/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ufo_num.append(number_of_ufos)<br
+/>&nbsp;&nbsp;&nbsp; print date_list<br
+/>&nbsp;&nbsp;&nbsp; print ufo_num<br
+/><br
+/></body>
+</html>
