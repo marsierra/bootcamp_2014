@@ -1,3 +1,5 @@
 https://github.com/ 
 https://etherpad.mozilla.org/esac
 alias ipython /home/msierra/Programs/anaconda/bin/ipython
+git checkout students
+git push -u https://github.com/marsierra/bootcamp_2014.git students
