@@ -1,0 +1,3 @@
+https://github.com/ 
+https://etherpad.mozilla.org/esac
+alias ipython /home/msierra/Programs/anaconda/bin/ipython
